@@ -33,7 +33,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "generate-pdf": "node ci\\pdf-generator.js"
+        "generate-pdf": "node ci/pdf-generator.js"
     },
     "eslintConfig": {
         "extends": "react-app"
