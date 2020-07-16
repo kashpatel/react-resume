@@ -61,7 +61,7 @@ export const Profile = (basics: ResumeSchemaBasics) => {
             username: `${basics.location.city}, ${basics.location.region}`,
         },
         ...basics.profiles,
-    ];
+    ].filter((i) => !!i.username);
 
     return (
         <section className="flex flex-wrap justify-start md:justify-between paper:justify-between print:justify-between">
