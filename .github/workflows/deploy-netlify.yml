@@ -24,6 +24,8 @@ jobs:
 
             - run: npm run build
 
+            - run: npm run generate-pdf
+
             - name: Deploy to netlify
               uses: netlify/actions/cli@master
               env:
