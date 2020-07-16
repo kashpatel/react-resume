@@ -1,0 +1,31 @@
+import React from 'react';
+import { ResumeSchemaEducation } from '../../resume-data/interface';
+import { Date_Formatter } from '../../utils/date';
+
+export const Education = (props: { data: ResumeSchemaEducation[] }) => {
+    const educations = props.data.map(
+        (ed: ResumeSchemaEducation, i: number) => {
+            return (
+                <div key={i} className="mb-4">
+                    <h3>
+                        <a
+                            className="font-bold text-primary-700 hover:text-primary-600"
+                            href={ed.website}
+                        >
+                            {ed.area}
+                        </a>
+                    </h3>
+
+                    <h4 className="text-secondary-600">
+                        {Date_Formatter(ed.startDate)} -{' '}
+                        {Date_Formatter(ed.endDate)}
+                        &nbsp;|&nbsp;
+                        {ed.institution}
+                    </h4>
+                </div>
+            );
+        }
+    );
+
+    return <div>{educations}</div>;
+};

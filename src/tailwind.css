@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@responsive {
+    .w-paper {
+        width: 8.5in;
+    }
+
+    .h-paper {
+        height: 11in;
+    }
+}
+
+@media print and (color) {
+    * {
+        -webkit-print-color-adjust: exact;
+    }
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+html,
+body {
+    @apply bg-gray-300;
+    @apply font-serif;
+    @apply box-border;
+    @apply antialiased;
+
+    font-size: 16px;
+    font-feature-settings: 'ss01', 'cv05', 'cv07', 'cv08';
+}
