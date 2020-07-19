@@ -6,9 +6,8 @@ on:
             - master
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-
+    build:
+        runs-on: windows-latest
         steps:
             - uses: actions/checkout@v1
             - name: Setup node 12
@@ -26,6 +25,21 @@ jobs:
 
             - run: npm run generate-pdf
 
+            - name: Upload build directory
+                uses: actions/upload-artifact@v1
+                with:
+                    name: build
+                    path: build
+
+    deploy:
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - name: Download build directory
+                uses: actions/download-artifact@v1
+                with:
+                name: build
+            
             - name: Deploy to netlify
               uses: netlify/actions/cli@master
               env:

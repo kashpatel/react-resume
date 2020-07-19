@@ -7,19 +7,15 @@ const puppeteer = require('puppeteer');
         const page = await browser.newPage();
 
         const indexFilePath = path.resolve(__dirname, '../build/index.html');
+        console.log('indexFilePath ', indexFilePath);
 
-        console.log('indexFilePath ', `file:/${indexFilePath}`);
-        await page.goto(`file:/${indexFilePath}`, {
-            waitUntil: 'networkidle0',
-        });
+        await page.goto(indexFilePath, { waitUntil: 'networkidle0' });
 
         const pdfFilePath = path.resolve(
             __dirname,
             '../build/Kashyap_Patel_Resume.pdf'
         );
-
         console.log('pdfFilePath ', pdfFilePath);
-
         await page.pdf({ path: pdfFilePath });
 
         await browser.close();
