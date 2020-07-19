@@ -1,23 +1,29 @@
 const path = require('path');
 const puppeteer = require('puppeteer');
 
+const addProtocol = (path) => `file://${path}`;
+
 (async function () {
-    const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox'],
-    });
+    const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
 
     const indexFilePath = path.resolve(__dirname, '../build/index.html');
-    console.log('indexFilePath ', indexFilePath);
-    await page.goto(indexFilePath, { waitUntil: 'networkidle0' });
+
+    const finalIndexPath = addProtocol(indexFilePath);
+
+    console.log('finalIndexPath ', finalIndexPath);
+    await page.goto(finalIndexPath, { waitUntil: 'networkidle0' });
 
     const pdfFilePath = path.resolve(
         __dirname,
         '../build/Kashyap_Patel_Resume.pdf'
     );
-    console.log('pdfFilePath ', pdfFilePath);
-    await page.pdf({ path: pdfFilePath });
+
+    const finalPdfPath = addProtocol(pdfFilePath);
+
+    console.log('finalPdfPath ', finalPdfPath);
+
+    await page.pdf({ path: finalPdfPath });
 
     await browser.close();
 })();
