@@ -43,7 +43,7 @@ export default {
                 'I build features that help the Federal Bank to auction market operations efficiently.',
             highlights: [
                 'Lead an effort to convert Angular 6 code into Angular 8 with a focus on reducing continuous integration times using Nx',
-                'Redesigned legacy npm packages, improving app performance remarkably',
+                'Redesigned legacy npm libraries, improving app performance remarkably',
                 'Pushed for better development practices. Mentoring fellow team members',
             ],
             position: 'Senior Frontend Developer',
@@ -83,10 +83,10 @@ export default {
             summary:
                 'I rebuilt legacy healthcare software as modern web applications with an emphasis on maintainability and usability.',
             highlights: [
-                'Introduced continuous integration pipeline and local development environments',
-                'Updated AngularJS apps to Angular 6',
-                'Contributed to 10+ private NPM packages to increase reusability across web applications',
+                'Introduced a continuous integration pipeline and local development environment',
                 'Developed intuitive employers Solr search for PEI-WCB',
+                'Migrated AngularJS apps to Angular 6',
+                'Contributed to private NPM libraries to increase reusability across web applications',
             ],
             position: 'Programmer Analyst',
             startDate: '2016-12-16',
@@ -159,7 +159,7 @@ export default {
                 'I added AODA accessibility support to the Ontario Ministry of Education application.',
             highlights: [
                 'Performed software and hardware infrastructure maintenance',
-                'Collaborated with clients to gather requirements and to present progress report',
+                'Collaborated with clients to gather requirements and to present a progress report',
             ],
             position: 'System Anylast and Administrator',
             startDate: '2015-01-01',
@@ -325,8 +325,10 @@ export default {
                 'Automated testing',
                 'Continuous integration/deployment (CI/CD)',
                 'Cross-browser debugging',
+                'Functional Programming',
                 'Internationalization (i18n)',
                 'REST API design',
+                'Reactive Programming',
                 'Responsive design',
                 'Single Page Applications (SPAs)',
             ],
