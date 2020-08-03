@@ -5,7 +5,7 @@ export default {
         name: 'Kashyap Patel',
         label: '',
         picture: '',
-        email: 'hello@kashpatel.dev',
+        email: 'kash@kashpatel.dev',
         website: '',
         summary: '',
         location: {
