@@ -67,8 +67,7 @@ export default {
                 },
                 {
                     display: 'Java',
-                    website:
-                        'https://en.wikipedia.org/wiki/Java_(programming_language)',
+                    website: 'https://en.wikipedia.org/wiki/Java_(programming_language)',
                 },
                 {
                     display: 'Oracle',
@@ -83,7 +82,7 @@ export default {
             summary:
                 'I rebuilt legacy healthcare software as modern web applications with an emphasis on maintainability and usability.',
             highlights: [
-                'Introduced a continuous integration pipeline and local development environment',
+                'Introduced a continuous integration pipeline and local development environment using Docker',
                 'Developed intuitive employers Solr search for PEI-WCB',
                 'Migrated AngularJS apps to Angular 6',
                 'Contributed to private NPM libraries to increase reusability across web applications',
@@ -171,8 +170,7 @@ export default {
                 },
                 {
                     display: 'C#',
-                    website:
-                        'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)',
+                    website: 'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)',
                 },
                 {
                     display: 'MS-SQL',
@@ -229,8 +227,7 @@ export default {
             keywords: [
                 {
                     display: 'JavaScript',
-                    website:
-                        'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+                    website: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
                 },
                 {
                     display: 'TypeScript',
@@ -242,8 +239,7 @@ export default {
                 },
                 {
                     display: 'C♯',
-                    website:
-                        'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)',
+                    website: 'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)',
                 },
                 {
                     display: 'NoSQL',
@@ -293,8 +289,7 @@ export default {
                 },
                 {
                     display: 'Azure DevOps',
-                    website:
-                        'https://azure.microsoft.com/en-ca/services/devops/#DevOps',
+                    website: 'https://azure.microsoft.com/en-ca/services/devops/#DevOps',
                 },
                 {
                     display: 'Nginx',

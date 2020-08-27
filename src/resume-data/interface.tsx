@@ -161,7 +161,7 @@ export interface ResumeSchemaSkills {
     /**
      * List some keywords pertaining to this skill
      */
-    keywords?: Array<{ display: string; website: string } | string>;
+    keywords?: ({ display: string; website: string } | string)[];
     [k: string]: any;
 }
 

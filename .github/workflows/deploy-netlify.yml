@@ -17,6 +17,8 @@ jobs:
 
             - run: npm install
 
+            - run: npm run lint
+
             - run: echo '::set-env name=CI::false'
 
             - run: echo '::set-env name=NODE_ENV::production'
