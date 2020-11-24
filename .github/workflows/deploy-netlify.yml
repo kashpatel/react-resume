@@ -19,9 +19,9 @@ jobs:
 
             - run: npm run lint
 
-            - run: echo "{CI}={false}" >> $GITHUB_ENV
+            - run: echo "CI=false" >> $GITHUB_ENV
 
-            - run: echo "{NODE_ENV}={production}" >> $GITHUB_ENV
+            - run: echo "NODE_ENV=production" >> $GITHUB_ENV
 
             - run: npm run build
 
