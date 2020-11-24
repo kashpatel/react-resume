@@ -40,7 +40,7 @@ export default {
             website: 'https://www.cgi.com/en/overview',
 
             summary:
-                'I build features that help the Federal Bank to auction market operations efficiently.',
+                'I build features that help the Federal Bank auction market operations efficiently.',
             highlights: [
                 'Lead an effort to convert Angular 6 code into Angular 8 with a focus on reducing continuous integration times using Nx',
                 'Redesigned legacy npm libraries, improving app performance remarkably',
