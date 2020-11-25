@@ -19,7 +19,11 @@ jobs:
 
             - run: npm run lint
 
-            - run: CI=false NODE_ENV=production npm run build
+            - name: build the app
+                run: npm run build
+                env:
+                    CI: false
+                    NODE_ENV: production
 
             - run: npm run generate-pdf
 
