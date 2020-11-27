@@ -5,10 +5,7 @@ import { FooterComponent as Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 
 export const App = () => {
-    ReactGA.initialize('G-473H1Y3X12', {
-        debug: true,
-        gaOptions: { cookieDomain: 'none' },
-    });
+    ReactGA.initialize('G-473H1Y3X12');
     ReactGA.pageview(window.location.pathname + window.location.search);
 
     return (
