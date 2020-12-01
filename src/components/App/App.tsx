@@ -1,13 +1,9 @@
 import React from 'react';
-import ReactGA from 'react-ga';
 import { Content } from '../Content/Content';
 import { FooterComponent as Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 
 export const App = () => {
-    ReactGA.initialize('G-473H1Y3X12');
-    ReactGA.pageview(window.location.pathname + window.location.search);
-
     return (
         <div
             className='flex flex-col mx-auto w-full paper:w-paper print:w-paper
