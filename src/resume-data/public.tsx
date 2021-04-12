@@ -40,10 +40,11 @@ export default {
             website: 'https://www.cgi.com/en/overview',
 
             summary:
-                'I build features that help the Federal Bank auction market operations efficiently.',
+                'I build features that help the Bank of Canada auction market operations efficiently.',
             highlights: [
-                'Lead an effort to convert Angular 6 code into Angular 8 with a focus on reducing continuous integration times using Nx',
-                'Redesigned legacy npm libraries, improving app performance remarkably',
+                'Lead an effort to migrate Angular 6 code to Angular 8',
+                'Reduced CI/CD time using Angular Monorepo app structure and Nx',
+                'Rewrote core frontend validation architecture which improved page rendering time by 80%',
                 'Pushed for better development practices. Mentoring fellow team members',
             ],
             position: 'Senior Frontend Developer',
@@ -82,10 +83,10 @@ export default {
             summary:
                 'I rebuilt legacy healthcare software as modern web applications with an emphasis on maintainability and usability.',
             highlights: [
-                'Introduced a continuous integration pipeline and local development environment using Docker',
-                'Developed intuitive employers Solr search for PEI-WCB',
-                'Migrated AngularJS apps to Angular 6',
-                'Contributed to private NPM libraries to increase reusability across web applications',
+                'Introduced a continuous integration pipeline and development environment using Docker',
+                'Developed intuitive employers search using Apache Solr',
+                'Migrated multiple AngularJS apps to Angular 6 version',
+                'Contributed to private NPM libraries and documentation',
             ],
             position: 'Programmer Analyst',
             startDate: '2016-12-16',
@@ -118,11 +119,11 @@ export default {
             website: 'https://www.metricaid.com/',
             location: 'North Bay, ON',
             summary:
-                'I contributed to the development of physicians scheduling application used across 10+ hospitals.',
+                'I contributed to the development of physician scheduling application used in 10+ hospitals.',
             highlights: [
-                'Created emails delivery mechanism which reduced delivery time by 50%',
-                'Designed interactive reports with patient flow data to predict emergency department trends',
-                'Optimized MongoDB queries, nightly scheduled tasks which allowed quicker app loads and smoother browsing',
+                'Created emails delivery mechanism which reduced delivery time up to 50%',
+                'Designed interactive reporting app with patient flow data and nvd3.js to predict emergency department trends.',
+                'Optimized MongoDB queries and nightly cron jobs using Goroutines to pre-process reporting data',
             ],
             position: 'Software Developer',
             startDate: '2015-03-15',
@@ -249,10 +250,18 @@ export default {
                     display: 'SQL',
                     website: 'https://en.wikipedia.org/wiki/SQL',
                 },
+                {
+                    display: 'HTML',
+                    website: 'https://en.wikipedia.org/wiki/HTML',
+                },
+                {
+                    display: 'CSS',
+                    website: 'https://en.wikipedia.org/wiki/CSS',
+                },
             ],
         },
         {
-            name: 'Frameworks',
+            name: 'Frameworks/Libraries',
             keywords: [
                 {
                     display: 'Angular',
@@ -269,6 +278,14 @@ export default {
                 {
                     display: 'jQuery',
                     website: 'https://jquery.com/',
+                },
+                {
+                    display: 'Angular Material',
+                    website: 'https://material.angular.io/',
+                },
+                {
+                    display: 'Ng Bootstrap',
+                    website: 'https://ng-bootstrap.github.io/#/home',
                 },
             ],
         },
