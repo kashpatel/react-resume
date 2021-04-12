@@ -24,7 +24,7 @@ export class FooterComponent extends React.Component {
             return null;
         } else {
             return (
-                <div className='w-full text-center mt-4 mb-4 paper:mb-0 print:hidden'>
+                <div className='w-full text-center mt-4 mb-4 print:hidden'>
                     <p className='inline-block'>
                         <span className='text-primary-600'>
                             Last updated on{' '}
