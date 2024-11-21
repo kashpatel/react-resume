@@ -12,10 +12,10 @@ jobs:
             - name: Checkout Master Branch
               uses: actions/checkout@v1
 
-            - name: Setup node 12
+            - name: Setup node 18
               uses: actions/setup-node@v1
               with:
-                  node-version: 12.x
+                  node-version: 18.x
 
             - name: Install Dependencies
               run: npm install
