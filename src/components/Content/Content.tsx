@@ -9,35 +9,45 @@ const titleClasses = 'font-bold uppercase text-secondary-600 mb-3';
 export class Content extends Component {
     render() {
         return (
-            <div className='-mx-4 flex flex-col paper:flex-row print:flex-row justify-between'>
-                <div className='px-4 w-full paper:w-1/2 print:w-1/2'>
-                    <section>
-                        <h2 className={titleClasses}>Experience</h2>
+            <ResumeDataContext.Consumer>
+                {data => {
+                    const significantWork = data.work.filter(work => work.significant);
 
-                        <ResumeDataContext.Consumer>
-                            {data => <Experience data={data.work} />}
-                        </ResumeDataContext.Consumer>
-                    </section>
-                </div>
+                    const nonSignificantWork = data.work.filter(work => !work.significant);
 
-                <div className='px-4 w-full paper:w-1/2 print:w-1/2'>
-                    <section>
-                        <h2 className={titleClasses}>Education</h2>
+                    return (
+                        <div className='-mx-4 flex flex-col paper:flex-row print:flex-row justify-between'>
+                            <div className='px-4 w-full paper:w-1/2 print:w-1/2'>
+                                <section>
+                                    <h2 className={titleClasses}>Experience</h2>
 
-                        <ResumeDataContext.Consumer>
-                            {data => <Education data={data.education} />}
-                        </ResumeDataContext.Consumer>
-                    </section>
+                                    <Experience data={significantWork} />
+                                </section>
+                            </div>
 
-                    <section className='mt-5'>
-                        <h2 className={titleClasses}>Skills</h2>
+                            <div className='px-4 w-full paper:w-1/2 print:w-1/2'>
+                                <section>
+                                    <h2 className={titleClasses}>Education</h2>
 
-                        <ResumeDataContext.Consumer>
-                            {data => <Skills data={data.skills} />}
-                        </ResumeDataContext.Consumer>
-                    </section>
-                </div>
-            </div>
+                                    <Education data={data.education} />
+                                </section>
+
+                                <section className='mt-5'>
+                                    <h2 className={titleClasses}>Skills</h2>
+
+                                    <Skills data={data.skills} />
+                                </section>
+
+                                <section className='mt-5'>
+                                    <h2 className={titleClasses}>Experiences</h2>
+
+                                    <Experience data={nonSignificantWork} />
+                                </section>
+                            </div>
+                        </div>
+                    );
+                }}
+            </ResumeDataContext.Consumer>
         );
     }
 }

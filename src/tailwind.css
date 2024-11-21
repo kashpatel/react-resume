@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@responsive {
+@layer utilities {
     .w-paper {
         width: 8.5in;
     }
 
     .h-paper {
-        height: 11in;
+        height: 12.3in;
     }
 }
 
@@ -27,7 +27,6 @@ body,
 html,
 body {
     @apply bg-gray-300;
-    @apply font-serif;
     @apply box-border;
     @apply antialiased;
 

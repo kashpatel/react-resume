@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { merge } from 'lodash';
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+
+import merge from 'lodash/merge';
 import React from 'react';
 import { ResumeSchema } from '../resume-data/interface';
 

@@ -9,9 +9,9 @@ export default {
         website: '',
         summary: '',
         location: {
-            city: 'Charlottetown',
+            city: 'Edmonton',
             countryCode: 'CA',
-            region: 'PE',
+            region: 'AB',
         },
         profiles: [
             {
@@ -36,19 +36,60 @@ export default {
     },
     work: [
         {
-            company: 'CGI Inc.',
+            company: 'Cvent',
+            website: 'https://www.cvent.com/',
+            summary: 'I build features that deliver successful events worldwide.',
+            highlights: [
+                'Creator of the <a class="hover:underline text-primary-700" target="_blank" href="https://support.cvent.com/s/communityarticle/Adding-and-Editing-Images-in-the-Site-Designer"/>Image Editor</a> tool',
+                'Maintainer of the <a class="hover:underline text-primary-700" target="_blank" href="https://support.cvent.com/s/communityarticle/Using-the-Site-Designer"/>Site Designer Framework</a>',
+                'Developed and integrated <a class="hover:underline text-primary-700" target="_blank" href="https://www.cvent.com/en/event-marketing-management/ai-writing-assistant">AI writing assistant</a>',
+                'Direct reports & cross teams collaborations'
+            ],
+            position: 'Lead Software Engineer',
+            startDate: '2021-06-21',
+            significant: true,
+            tags: [
+                {
+                    display: 'React',
+                    website: 'https://https://reactjs.org/',
+                },
+                {
+                    display: 'Redux',
+                    website: 'https://redux.js.org/',
+                },
+                {
+                    display: 'Typescript',
+                    website: 'https://www.typescriptlang.org/',
+                },
+                {
+                    display: 'AWS',
+                    website: 'https://aws.amazon.com/',
+                },
+                {
+                    display: 'Node',
+                    website: 'https://nodejs.org/en/',
+                },
+                {
+                    display: 'Java',
+                    website: 'https://en.wikipedia.org/wiki/Java_(programming_language)',
+                },
+            ],
+        },
+        {
+            company: 'CGI',
             website: 'https://www.cgi.com/en/overview',
-
             summary:
-                'I build features that help the Bank of Canada auction market operations efficiently.',
+                'I built features that helped Bank of Canada auction market operations efficiently.',
             highlights: [
                 'Lead an effort to migrate Angular 6 code to Angular 8',
-                'Reduced CI/CD time using Angular Monorepo app structure and Nx',
+                'Reduced CI time using monorepo architecture & nx.dev',
                 'Rewrote core frontend validation architecture which improved page rendering time by 80%',
                 'Pushed for better development practices. Mentoring fellow team members',
             ],
             position: 'Senior Frontend Developer',
             startDate: '2018-11-05',
+            endDate: '2021-06-14',
+            significant: true,
             tags: [
                 {
                     display: 'Angular',
@@ -77,20 +118,21 @@ export default {
             ],
         },
         {
-            company: 'DeltaWare Inc.',
+            company: 'DeltaWare - Maximus Canada',
             website: 'https://maximuscanada.ca/locations',
             location: 'Charlottetown, PE',
             summary:
                 'I rebuilt legacy healthcare software as modern web applications with an emphasis on maintainability and usability.',
             highlights: [
-                'Introduced a continuous integration pipeline and development environment using Docker',
+                'Introduced an Azure CI pipeline and development environment using Docker',
                 'Developed intuitive employers search using Apache Solr',
-                'Migrated multiple AngularJS apps to Angular 6 version',
+                'Migrated AngularJS code to Angular 6',
                 'Contributed to private NPM libraries and documentation',
             ],
             position: 'Programmer Analyst',
             startDate: '2016-12-16',
             endDate: '2018-11-03',
+            significant: true,
             tags: [
                 {
                     display: 'Angular',
@@ -115,19 +157,20 @@ export default {
             ],
         },
         {
-            company: 'MetricAid Inc.',
+            company: 'MetricAid',
             website: 'https://www.metricaid.com/',
             location: 'North Bay, ON',
             summary:
                 'I contributed to the development of physician scheduling application used in 10+ hospitals.',
             highlights: [
-                'Created emails delivery mechanism which reduced delivery time up to 50%',
+                'Created emails program reducing delivery time up to 50%',
                 'Designed interactive reporting app with patient flow data and nvd3.js to predict emergency department trends.',
                 'Optimized MongoDB queries and nightly cron jobs using Goroutines to pre-process reporting data',
             ],
             position: 'Software Developer',
             startDate: '2015-03-15',
             endDate: '2016-12-16',
+            significant: true,
             tags: [
                 {
                     display: 'Golang',
@@ -152,7 +195,7 @@ export default {
             ],
         },
         {
-            company: 'Shore Consulting Group.',
+            company: 'Shore Consulting',
             website: 'https://www.shore.ca/',
             location: 'Toronto, ON',
             summary:
@@ -164,6 +207,7 @@ export default {
             position: 'System Anylast and Administrator',
             startDate: '2015-01-01',
             endDate: '2015-03-12',
+            significant: false,
             tags: [
                 {
                     display: 'ASP.NET',
@@ -243,6 +287,10 @@ export default {
                     website: 'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)',
                 },
                 {
+                    display: 'Java',
+                    website: 'https://en.wikipedia.org/wiki/Java_(programming_language)',
+                },
+                {
                     display: 'NoSQL',
                     website: 'https://www.mongodb.com/nosql-explained',
                 },
@@ -293,20 +341,24 @@ export default {
             name: 'Tools',
             keywords: [
                 {
-                    display: 'Docker',
-                    website: 'https://www.docker.com/',
+                    display: 'AWS',
+                    website: 'https://aws.amazon.com/',
                 },
                 {
-                    display: 'Jira',
-                    website: 'https://www.atlassian.com/software/jira',
+                    display: 'Azure DevOps',
+                    website: 'https://azure.microsoft.com/en-ca/services/devops/#DevOps',
+                },
+                {
+                    display: 'Docker',
+                    website: 'https://www.docker.com/',
                 },
                 {
                     display: 'Jenkins',
                     website: 'https://www.jenkins.io/',
                 },
                 {
-                    display: 'Azure DevOps',
-                    website: 'https://azure.microsoft.com/en-ca/services/devops/#DevOps',
+                    display: 'Jira',
+                    website: 'https://www.atlassian.com/software/jira',
                 },
                 {
                     display: 'Nginx',
@@ -321,26 +373,22 @@ export default {
                     website: 'https://nx.dev/',
                 },
                 {
-                    display: 'Balsamiq Wireframes',
-                    website: 'https://balsamiq.com/wireframes/',
-                },
-                {
-                    display: 'Digital Ocean',
-                    website: 'https://www.digitalocean.com/',
+                    display: 'Figma',
+                    website: 'https://www.figma.com/',
                 },
             ],
         },
         {
             name: 'Concepts',
             keywords: [
-                'Agile Methodology',
                 'Automated testing',
+                'Developer Mentoring',
                 'Continuous integration/deployment (CI/CD)',
                 'Cross-browser debugging',
-                'Functional Programming',
+                'Functional programming',
                 'Internationalization (i18n)',
-                'REST API design',
-                'Reactive Programming',
+                'REST/GraphQL API design',
+                'Reactive programming',
                 'Responsive design',
                 'Single Page Applications (SPAs)',
             ],

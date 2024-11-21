@@ -34,7 +34,7 @@ export const Experience = (props: { data: ResumeSchemaWork[] }) => {
                                     icon={faChevronCircleRight}
                                     className='mr-1 mt-1 text-secondary-600 align-middle'
                                 />
-                                <div>{hl}</div>
+                                <div dangerouslySetInnerHTML={{ __html: hl }}></div>
                             </li>
                         );
                     })}

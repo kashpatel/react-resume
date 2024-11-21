@@ -7,11 +7,10 @@ const puppeteer = require('puppeteer');
         const page = await browser.newPage();
 
         const indexFilePath = path.resolve(__dirname, '../build/index.html');
-
-        await page.goto(indexFilePath, { waitUntil: 'networkidle0' });
+        await page.goto(`file:///${indexFilePath}`, { waitUntil: 'networkidle0' });
 
         const pdfFilePath = path.resolve(__dirname, '../build/Kashyap_Patel_Resume.pdf');
-        await page.pdf({ path: pdfFilePath });
+        await page.pdf({ path: pdfFilePath, height: '12.31in'  });
 
         await browser.close();
     } catch (err) {

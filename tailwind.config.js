@@ -1,6 +1,7 @@
-const { colors } = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors')
 
 module.exports = {
+    content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
         extend: {
             screens: {
@@ -22,12 +23,12 @@ module.exports = {
                 ],
             },
             scale: {
-                '120': '1.2',
-                '140': '1.4',
-                '160': '1.6',
+                120: '1.2',
+                140: '1.4',
+                160: '1.6',
             },
             fontSize: {
-                '70': '0.70rem',
+                70: '0.70rem',
             },
             colors: {
                 primary: colors.blue,
@@ -37,8 +38,5 @@ module.exports = {
                 '0.10': '0.10rem',
             },
         },
-    },
-    variants: ['responsive', 'hover'],
-    purge: [],
-    plugins: [],
+    }
 };

@@ -10,7 +10,7 @@ export class Header extends Component {
                 <ResumeDataContext.Consumer>
                     {data => (
                         <>
-                            <h1 className='text-5xl text-primary-700 leading-none mb-2'>
+                            <h1 className='text-5xl text-primary-700 leading-none mb-3'>
                                 {data.basics.name}
                                 {ViewPDFButton()}
                             </h1>
