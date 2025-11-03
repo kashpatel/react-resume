@@ -22,21 +22,10 @@ module.exports = {
                     'Arial',
                 ],
             },
-            scale: {
-                120: '1.2',
-                140: '1.4',
-                160: '1.6',
-            },
-            fontSize: {
-                70: '0.70rem',
-            },
             colors: {
                 primary: colors.blue,
-                secondary: colors.gray,
-            },
-            padding: {
-                '0.10': '0.10rem',
-            },
+                secondary: colors.slate,
+            }
         },
     }
 };

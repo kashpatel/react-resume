@@ -2,8 +2,6 @@
  * Thanks to https://cdn.jsdelivr.net/npm/@kurone-kito/jsonresume-types@0.1.2/index.d.ts
  */
 
-import { IconName } from '@fortawesome/fontawesome-svg-core';
-
 export interface ResumeSchemaBasics {
     name?: string;
     /**
@@ -66,8 +64,8 @@ export interface ResumeSchemaBasics {
          */
         url?: string;
 
-        /** Font awesome icon */
-        icon?: IconName;
+        /** Icon name */
+        icon?: string;
         [k: string]: any;
     }[];
     [k: string]: any;

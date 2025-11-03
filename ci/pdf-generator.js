@@ -10,7 +10,15 @@ const puppeteer = require('puppeteer');
         await page.goto(`file:///${indexFilePath}`, { waitUntil: 'networkidle0' });
 
         const pdfFilePath = path.resolve(__dirname, '../build/Kashyap_Patel_Resume.pdf');
-        await page.pdf({ path: pdfFilePath, height: '12.31in'  });
+        await page.pdf({
+            path: pdfFilePath,
+            // format: 'A6'
+            height: '1180px',
+            width: '816px',
+            printBackground: false,
+            pageRanges: '1',
+
+        });
 
         await browser.close();
     } catch (err) {

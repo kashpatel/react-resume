@@ -1,64 +1,65 @@
-import { IconName, library } from '@fortawesome/fontawesome-svg-core';
-import { faGithubAlt, faLinkedinIn, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { FaGithubAlt, FaLinkedinIn, FaStackOverflow } from 'react-icons/fa';
+import { HiEnvelope, HiMapPin, HiPhone } from 'react-icons/hi2';
 import { ResumeSchemaBasics } from '../../resume-data/interface';
 
-library.add(faPhoneAlt, faEnvelope, faLinkedinIn, faGithubAlt, faStackOverflow, faMapMarkerAlt);
+const ICON_MAP = {
+    phone: HiPhone,
+    email: HiEnvelope,
+    location: HiMapPin,
+    'github-alt': FaGithubAlt,
+    'linkedin-in': FaLinkedinIn,
+    'stack-overflow': FaStackOverflow,
+} as const;
+
+type ContactLinkProps = {
+    icon?: string;
+    url: string;
+    username: string;
+};
+
+export const ContactLink: React.FC<ContactLinkProps> = ({ icon, url, username }) => {
+    const Icon = ICON_MAP[icon];
+
+    return (
+        <div className='whitespace-nowrap'>
+            <Icon className='mr-1 align-middle text-primary-700' />
+            <a
+                href={url}
+                className='hover:underline hover:text-primary-700 transition-colors duration-150'
+            >
+                {username}
+            </a>
+        </div>
+    );
+};
 
 export const Profile = (basics: ResumeSchemaBasics) => {
-    const Slash = (
-        <span aria-hidden='true' className='text-secondary-600 hidden paper:inline print:hidden'>
-            /
-        </span>
-    );
-
-    const Anchor = (link: string, text: string) => (
-        <a href={link} className='hover:underline text-primary-700 hover:text-primary-600'>
-            {text}
-        </a>
-    );
-
-    const items = [
+    const DEFAULT_ITEMS = [
         {
-            icon: 'phone-alt' as IconName,
-            prefix: 'fa',
-            url: 'tel:' + basics.phone,
+            icon: 'phone',
+            url: `tel:${basics.phone}`,
             username: basics.phone,
         },
         {
-            icon: 'envelope' as IconName,
-            prefix: 'fa',
-            url: 'mailto:' + basics.email,
+            icon: 'email',
+            url: `mailto:${basics.email}`,
             username: basics.email,
         },
         {
-            icon: 'map-marker-alt' as IconName,
-            prefix: 'fa',
+            icon: 'location',
             url: 'https://en.wikipedia.org/wiki/Charlottetown',
             username: `${basics.location.city}, ${basics.location.region}`,
         },
-        ...basics.profiles,
-    ].filter(i => !!i.username);
+    ];
+
+    const items = [...DEFAULT_ITEMS, ...basics.profiles].filter(i => !!i.username);
 
     return (
-        <section className='flex flex-wrap justify-start md:justify-between paper:justify-between print:justify-between'>
+        <section className='flex flex-wrap gap-3 justify-start paper:justify-between print:justify-between'>
             {items.map((item, i: number) => (
                 <React.Fragment key={i}>
-                    <div className='whitespace-no-wrap mr-3 mb-1 md:m-0 paper:m-0 print:m-0'>
-                        <FontAwesomeIcon
-                            icon={{
-                                iconName: item.icon,
-                                prefix: item.prefix || 'fab',
-                            }}
-                            className='mr-1 align-middle text-secondary-600'
-                        />
-
-                        {Anchor(item.url, item.username)}
-                    </div>
-
-                    {i < items.length - 1 ? Slash : null}
+                    <ContactLink icon={item.icon} url={item.url} username={item.username} />
                 </React.Fragment>
             ))}
         </section>

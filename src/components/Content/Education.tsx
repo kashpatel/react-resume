@@ -5,7 +5,7 @@ import { DateFormatter } from '../../utils/date';
 export const Education = (props: { data: ResumeSchemaEducation[] }) => {
     const educations = props.data.map((ed: ResumeSchemaEducation, i: number) => {
         return (
-            <div key={i} className='mb-4'>
+            <div key={i}>
                 <h3>
                     <a
                         className='font-bold text-primary-700 hover:text-primary-600'
@@ -24,5 +24,5 @@ export const Education = (props: { data: ResumeSchemaEducation[] }) => {
         );
     });
 
-    return <div>{educations}</div>;
+    return <div className='flex flex-col space-between gap-4'>{educations}</div>;
 };
