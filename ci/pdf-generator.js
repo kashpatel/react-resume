@@ -12,8 +12,7 @@ const puppeteer = require('puppeteer');
         const pdfFilePath = path.resolve(__dirname, '../build/Kashyap_Patel_Resume.pdf');
         await page.pdf({
             path: pdfFilePath,
-            // format: 'A6'
-            height: '1180px',
+            height: '1169px',
             width: '816px',
             printBackground: false,
             pageRanges: '1',
